@@ -34,5 +34,4 @@ export class ContactController {
   async delete(@Param('id') id): Promise<any> {
     return this.contactService.delete(id);
   }
-
 }
