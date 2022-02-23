@@ -5,7 +5,7 @@ export class Contact {
   id: number;
 
   @Column()
-  name?: string;
+  name: string;
 
   @Column()
   title: string;
