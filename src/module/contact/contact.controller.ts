@@ -19,18 +19,18 @@ export class ContactController {
     return this.contactService.readAll();
   }
 
-  @Post('create')
+  @Post()
   async create(@Body() contact: Contact): Promise<any> {
     return this.contactService.create(contact);
   }
 
-  @Put(':id/update')
+  @Put(':id')
   async update(@Param('id') id, @Body() contact: Contact): Promise<any> {
     contact.id = Number(id);
     return this.contactService.update(contact);
   }
 
-  @Delete(':id/delete')
+  @Delete(':id')
   async delete(@Param('id') id): Promise<any> {
     return this.contactService.delete(id);
   }
